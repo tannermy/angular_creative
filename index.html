@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="angularStyles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="angularstuff.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+    <h1>Color Picker</h1>
+    <h2>Select 3 colors to combine in the color-picker boxes</h2>
+    <form>
+        <div style="background-color:rgb({{red}},{{green}},{{blue}});
+ color:{{mixedtext}};
+ height:340px;
+ width:800px;
+ position:relative;
+ float:left;
+ border:25px solid rgb({{redborder}},{{greenborder}},{{blueborder}});"></div>
+        <input type="text" placeholder="Red Value" ng-model="red"
+ style="background-color:rgb({{red}},0,0);
+ color:{{redtext}};
+ height:70px;
+ width:70px;
+ border:5px solid black;
+ padding:25px;">
+        <input type="text" placeholder="Red Border Value" ng-model="redborder"
+ style="background-color:rgb({{redborder}},0,0);
+ color:{{redbordertext}};
+ height:70px;
+ width:70px;
+ border:5px solid black;
+ padding:25px;"><br>
+
+        <input type="text" placeholder="Green Value" ng-model="green"
+ style="background-color:rgb(0,{{green}},0);
+ color:{{greentext}};
+ height:70px;
+ width:70px;
+ border:5px solid black;
+ padding:25px;">
+        <input type="text" placeholder="Green Border Value" ng-model="greenborder"
+ style="background-color:rgb(0,{{greenborder}},0);
+ color:{{greenbordertext}};
+ height:70px;
+ width:70px;
+ border:5px solid black;
+ padding:25px;"><br>
+
+        <input type="text" placeholder="Blue Value" ng-model="blue"
+ style="background-color:rgb(0,0,{{blue}});
+ color:{{bluetext}};
+ height:70px;
+ width:70px;
+ border:5px solid black;
+ padding:25px;">
+        <input type="text" placeholder="Blue Border Value" ng-model="blueborder"
+ style="background-color:rgb(0,0,{{blueborder}});
+ color:{{bluebordertext}};
+ height:70px;
+ width:70px;
+ border:5px solid black;
+ padding:25px;"><br>
+
+        
+    </form>
+<p>RGB: {{red}}, {{green}}, {{blue}}</p>
+<p>RGB Border: {{redborder}}, {{greenborder}}, {{blueborder}}</p>
+</div>
+
+</body>
+</html>
